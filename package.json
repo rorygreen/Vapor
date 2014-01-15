@@ -1,0 +1,19 @@
+{ "name"          : "mist-theme",
+  "description"   : "A minimal, responsive theme for Ghost.",
+  "version"       : "0.1.0",
+  "homepage"      : "http://github.com/rorygreen/mist-theme",
+  "author"        : "Rory Green <rorygreen@outlook.com>",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/rorygreen/mist-theme.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "~0.8.0"
+  },
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://github.com/rorygreen/mist-theme/raw/master/LICENSE"
+  }]
+}
