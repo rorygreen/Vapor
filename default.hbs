@@ -17,6 +17,14 @@
 </head>
 <body class="{{body_class}}">
 
+    <header id="site-head">
+        <div class="container">
+            {{#if @blog.logo}}<a id="blog-logo" href="{{@blog.url}}"><div class="bloglogo" style="background: url({{@blog.logo}})"></div></a>{{/if}}
+            <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+            <p class="blog-description">{{{@blog.description}}}</p>
+        </div>
+    </header>
+
     {{{body}}}
 
     <footer class="site-footer">
