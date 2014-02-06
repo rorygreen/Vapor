@@ -1,3 +1,5 @@
+@import url(//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300);
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import 'normalize';
 
 // Variables
@@ -13,18 +15,15 @@ $preFontFamily: "Consolas", Courier, monospace;
 $linkColor: #3498db;
 $linkColorHover: darken($linkColor, 50%);
 $borderColor: #ecf0f1;
-$subtleColor: rgba(0,0,0,0.05);
+$subtleColor: #f2f2f2;
 $postmetaColor: #95a5a6;
 $gistBackgroundColor: #fdfdfd;
 
-$maxPageWidth: 600px;
+$maxPageWidth: 900px;
 
 // Styles
 
 /* === Core Styles === */
-
-@import url(//fonts.googleapis.com/css?subset=latin,cyrillic-ext,latin-ext,cyrillic&family=Open+Sans+Condensed:300|Merriweather:400,300,300italic,400italic,700,700italic|Roboto+Slab:400,300);
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 
 body {
     background-color: $bodyBackgroundColor;
@@ -45,10 +44,6 @@ h1, h2, h3, h4, p, li, dt, dd {
     font-family: $baseFontFamily;
 }
 
-h1, .post-meta {
-    text-align: center
-}
-
 a, a:visited {
     color: $linkColor;
     text-decoration: none;
@@ -61,9 +56,9 @@ a:focus, a:hover {
 }
 
 p, li, dt, dd {
-    font-size: 18px;
+    font-size: 1em;
     font-weight: 100;
-    line-height: 30px;
+    line-height: 1.5em;
 }
 
 dt {
@@ -104,15 +99,11 @@ h1 {
     padding: 0;
 }
 
-#site-head, article, nav, article.preview, a.archive-link, .article-nav {
+article, nav, article.preview, a.archive-link, .article-nav {
     margin: 20px auto;
     max-width: $maxPageWidth;
     width: 90%;
 }
-
-    #site-head img {
-        max-width: 100%
-    }
 
 article.preview {
     margin-bottom: 4em;
@@ -126,12 +117,29 @@ article.preview {
 
 /* === Header === */
 
+#site-head {
+    width: 100%;
+    padding-top: 20px;
+    background: $subtleColor;
+}
+
+#site-head .container {
+    position: relative;
+    margin: auto;
+    max-width: $maxPageWidth;
+    width: 90%;
+    box-sizing: border-box;
+    padding-left: 100px;
+}
+
 #blog-logo {
     display: block;
     max-width: 100px;
     margin: 50px auto 0;
-    text-align: center;
-    div.bloglogo {
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+    .bloglogo {
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -141,24 +149,25 @@ article.preview {
     }
 }
 
-h1.blog-title, h2.blog-description {
-    text-align: center
+.blog-title, .blog-description {
+    text-align: right;
 }
 
-h1.blog-title {
-    font-size: 48px;
-    line-height: 52px;
+.blog-title {
+    font-size: 2em;
+    line-height: 1em;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     padding: 0;
 }
 
-h2.blog-description {
+.blog-description {
     border-bottom: 1px solid $borderColor;
     border-top: 1px solid $borderColor;
-    margin-bottom: 3em;
-    padding: .5em 1em;
+    padding: .5em 0;
+    margin: 0;
     line-height: 1.2em;
+    font-size: 0.9em;
 }
 
 header.article-header, header.page-header {
@@ -166,6 +175,14 @@ header.article-header, header.page-header {
 }
 
 /* === Body === */
+
+main {
+   margin-top: 80px;
+}
+
+.post-title {
+    // margin-top: 0;
+}
 
 section.author, section.share {
     width: 100%;
@@ -236,7 +253,7 @@ blockquote {
 .post-meta {
     color: $postmetaColor;
     font-family: $secondaryFontFamily;
-    font-size: 20px;
+    font-size: 1em;
     font-weight: 300;
     margin-top: 1em;
     margin-bottom: 1.2em;
@@ -529,7 +546,7 @@ a.archive-link {
 
 /* === Media Queries === */
 
-@media only screen and (min-width: 320px) and (max-width: 500px) { 
+@media only screen and (min-width: 320px) and (max-width: 500px) {
     footer section span.copyright {
         display: block
     }
